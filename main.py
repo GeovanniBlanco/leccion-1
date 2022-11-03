@@ -1,3 +1,5 @@
-# definicion de listas
-uno = [1, 2, 3]  #  las listas se crean delimitando sus elementos entre [ y ] y usando la , como separacion
-print(uno)
+nombre = "Jose"
+telefono = 5511286969
+correo = "yoova21@gmail.com"
+
+print(f'mi nombre es {nombre} y mi telefono es {telefono}, ademas de mi correo {correo}')
