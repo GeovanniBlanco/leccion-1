@@ -1,5 +1,4 @@
-nombre = "Jose"
-telefono = 5511286969
-correo = "yoova21@gmail.com"
+numero1 = "1"
+numero2 = "2"
 
-print(f'mi nombre es {nombre} y mi telefono es {telefono}, ademas de mi correo {correo}')
+print(int(numero1) + int(numero2))
