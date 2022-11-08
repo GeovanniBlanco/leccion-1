@@ -1,4 +1,4 @@
-numero1 = "1"
-numero2 = "2"
+titulo = input('proporciona el titulo de un libro: ')
+autor = input('proporciona el autor de un libro ')
 
-print(int(numero1) + int(numero2))
+print (f"el titulo del libro es {titulo} y el autor es {autor}")
