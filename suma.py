@@ -19,7 +19,7 @@ print(dt)
 fecha = input('ingresa una fecha: ')
 
 #coversion de string para las fechas
-dt_objeto = datetime.strptime(fecha, "%d-%m-%y")
+dt_objeto = datetime.strptime(fecha, "%d/%m/%Y %H:%M:%S")
 
 
 print (dt_objeto)
