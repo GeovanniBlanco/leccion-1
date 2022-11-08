@@ -1,3 +1,25 @@
-suma =  1+1 
+#importacion de librerias y manejo de fechas
 
-print (suma)
+from datetime import date, time,  datetime
+datetime.today()
+
+print(date.today())
+
+dt = datetime.now()
+dt.year
+dt.month
+dt.day
+dt.hour
+dt.minute
+dt.second
+dt.microsecond
+
+print(dt)
+
+fecha = input('ingresa una fecha: ')
+
+#coversion de string para las fechas
+dt_objeto = datetime.strptime(fecha, "%d-%m-%y")
+
+
+print (dt_objeto)
