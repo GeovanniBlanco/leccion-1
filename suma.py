@@ -18,8 +18,9 @@ print(dt)
 
 fecha = input('ingresa una fecha: ')
 
-#coversion de string para las fechas
-dt_objeto = datetime.strptime(fecha, "%d/%m/%Y %H:%M:%S")
+#coversion de string para las fechas %Y-%m-%d %H:%M  en vez de %d/%m/%Y %H:%M
+#dt_objeto es la variable creada para la conversion de la fecha a formato datetime.time
+dt_objeto = datetime.strptime(fecha, "%Y-%m-%d %H:%M")
 
-
-print (dt_objeto)
+dt_resta = datetime.today() - dt_objeto
+print (dt_resta)
