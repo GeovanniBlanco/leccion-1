@@ -1,6 +1,6 @@
 #importacion de librerias y manejo de fechas
 
-from datetime import date, time,  datetime
+from datetime import date, time,  datetime, timedelta
 datetime.today()
 
 print(date.today())
@@ -14,7 +14,7 @@ dt.minute
 dt.second
 dt.microsecond
 
-print(dt)
+print(dt.month)
 
 fecha = input('ingresa una fecha: ')
 
@@ -22,5 +22,11 @@ fecha = input('ingresa una fecha: ')
 #dt_objeto es la variable creada para la conversion de la fecha a formato datetime.time
 dt_objeto = datetime.strptime(fecha, "%Y-%m-%d %H:%M")
 
-dt_resta = datetime.today() - dt_objeto
+dt_resta = datetime.now() - dt_objeto
+dt_horas = dt_resta.days * 24
+
+#mpresion de la resta de la fecha ingresada y la fecha actual
 print (dt_resta)
+
+print (dt_resta.days)
+print (dt_horas)
