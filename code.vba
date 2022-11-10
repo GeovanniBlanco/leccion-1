@@ -1,3 +1,4 @@
+'<------------------------------------------------------------------------------------------ Work Ok
 Sub copiaDatos()
     Dim libroDatos As Workbook
     
@@ -23,6 +24,37 @@ Sub copiaDatos()
     ActiveSheet.Paste
     Range("A1").Select
     
+'--------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    
+
+
+
+'limpiado de datos y acomodo de columnas 
+    Set libroDatos = Workbooks.Open("C:\Users\DRS0034\Documents\procesar\total.xlsm")
+     Columns("N:N").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Columns("M:M").Select
+    Selection.TextToColumns Destination:=Range("Total__2[[#Headers],[INMUEBLE]]") _
+        , DataType:=xlDelimited, TextQualifier:=xlDoubleQuote, _
+        ConsecutiveDelimiter:=False, Tab:=False, Semicolon:=False, Comma:=False _
+        , Space:=False, Other:=True, OtherChar:="-", FieldInfo:=Array(Array(1, 1 _
+        ), Array(2, 1), Array(3, 9)), TrailingMinusNumbers:=True
+    Columns("N:O").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("S:T").Select
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = True
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+
+
     Set libroDatos = Workbooks.Open("C:\Users\DRS0034\Documents\procesar\total.xlsm")
     col = "A"
     
