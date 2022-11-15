@@ -20,7 +20,7 @@ fecha = input('ingresa una fecha: ')
 
 #coversion de string para las fechas %Y-%m-%d %H:%M  en vez de %d/%m/%Y %H:%M
 #dt_objeto es la variable creada para la conversion de la fecha a formato datetime.time
-dt_objeto = datetime.strptime(fecha, "%Y-%m-%d %H:%M")
+dt_objeto = datetime.strptime(fecha, "%d/%m/%Y %H:%M")
 
 dt_resta = datetime.now() - dt_objeto
 dt_horas = dt_resta.days * 24
@@ -30,3 +30,6 @@ print (dt_resta)
 
 print (dt_resta.days)
 print (dt_horas)
+
+
+
